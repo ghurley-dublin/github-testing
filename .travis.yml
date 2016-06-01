@@ -5,7 +5,7 @@ language: java
 script: 
     - mvn clean install -Dmaven.javadoc.skip=true
     - chmod 777 scripts/check.sh
-    - scripts/check.sh  
+    - scripts/check.sh
 
 cache:
   directories:
