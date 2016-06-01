@@ -11,6 +11,6 @@ cache:
 branches:
   only:
     - master
-	
+
 after_success:
-- scripts/check.sh
+    - scripts/check.sh
