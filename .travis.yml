@@ -1,0 +1,13 @@
+sudo: false
+
+language: java
+
+script: mvn clean install -Dmaven.javadoc.skip=true
+
+cache:
+  directories:
+  - $HOME/.m2
+
+branches:
+  only:
+    - master
