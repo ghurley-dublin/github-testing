@@ -13,4 +13,5 @@ branches:
     - master
 
 after_success:
+    - chmod 777 scripts/check.sh
     - scripts/check.sh
