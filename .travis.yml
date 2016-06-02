@@ -18,3 +18,11 @@ branches:
   only:
     - master
 
+notifications:
+  email:
+    recipients:
+      - $EMAIL
+      - other@example.com
+    on_success: change
+    on_failure: always
+
