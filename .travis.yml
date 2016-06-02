@@ -2,6 +2,9 @@ sudo: false
 
 language: java
 
+env:
+    - EMAIL=./scripts/set_email.sh
+
 script: 
     - mvn clean install -Dmaven.javadoc.skip=true
     - chmod 777 scripts/check.sh
