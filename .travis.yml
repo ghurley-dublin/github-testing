@@ -3,7 +3,7 @@ sudo: false
 language: java
 
 env:
-    - EMAIL=./scripts/set_email.sh
+    - EMAIL=ghurley@murex.com
 
 script: 
     - mvn clean install -Dmaven.javadoc.skip=true
@@ -22,7 +22,6 @@ notifications:
   email:
     recipients:
       - $EMAIL
-      - ghurley@murex.com
     on_success: always
     on_failure: always
 
