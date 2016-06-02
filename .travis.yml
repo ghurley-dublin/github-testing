@@ -22,7 +22,7 @@ notifications:
   email:
     recipients:
       - $EMAIL
-      - other@example.com
-    on_success: change
+      - ghurley@murex.com
+    on_success: always
     on_failure: always
 
