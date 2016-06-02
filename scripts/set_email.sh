@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "email@email.com"
+echo "ghurley@murex.com"
