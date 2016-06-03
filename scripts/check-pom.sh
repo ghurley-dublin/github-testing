@@ -16,4 +16,11 @@ echo "Old..."
 cat temp/old-tree.txt
 echo "------------------------------------"
 
-diff -q temp/current-tree.txt temp/old-tree.txt
+$DIFF=`diff -q temp/current-tree.txt temp/old-tree.txt`
+
+if [ -n "$DIFF" ]; then
+	echo "WARNING: POM dependency tree changed in latest commit"
+	diff -y temp/current-tree.txt temp/old-tree.txt
+fi
+
+echo "STATUS: WARNING"
