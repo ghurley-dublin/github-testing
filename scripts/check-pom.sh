@@ -14,5 +14,6 @@ cat temp/current-tree.txt
 echo "------------------------------------"
 echo "Old..."
 cat temp/old-tree.txt
+echo "------------------------------------"
 
-diff --exit-code temp/current-tree.txt temp/old-tree.txt
+diff -q temp/current-tree.txt temp/old-tree.txt
