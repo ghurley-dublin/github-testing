@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 # Determine if the following files changed in the branch
 echo "Checking POM dependencies for changes..."
 
@@ -15,7 +16,7 @@ echo "---- Previous dependencies..."
 cat temp/old-tree.txt
 echo "------------------------------------"
 
-$DIFF=`diff -q temp/current-tree.txt temp/old-tree.txt`
+DIFF=`diff -q temp/current-tree.txt temp/old-tree.txt`
 
 if [ -n "$DIFF" ]; then
 	echo "WARNING: POM dependency tree changed in latest commit"
