@@ -1,18 +1,17 @@
 #!/bin/bash
 # Determine if the following files changed in the branch
-set -x
 echo "Checking POM dependencies for changes..."
 
 mkdir temp
 mvn dependency:tree -Doutput=temp/current-tree.txt
 
-checkout HEAD^1
+git checkout HEAD^1
 mvn dependency:tree -Doutput=temp/old-tree.txt
 
-echo "Current..."
+echo "---- Current dependencies..."
 cat temp/current-tree.txt
 echo "------------------------------------"
-echo "Old..."
+echo "---- Previous dependencies..."
 cat temp/old-tree.txt
 echo "------------------------------------"
 
@@ -23,4 +22,4 @@ if [ -n "$DIFF" ]; then
 	diff -y temp/current-tree.txt temp/old-tree.txt
 fi
 
-echo "STATUS: WARNING"
+git checkout master
