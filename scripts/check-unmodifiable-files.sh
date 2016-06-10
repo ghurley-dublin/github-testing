@@ -3,7 +3,6 @@
 echo "-----------------------------------------------------------"
 echo "Checking for modifications to files that should not be changed..."
 echo "-----------------------------------------------------------"
-echo "Value of env variable TRAVIS_PULL_REQUEST=${TRAVIS_PULL_REQUEST}"
 if [ "${TRAVIS_PULL_REQUEST}" = true]; then
 	echo "Comparing HEAD against pending commit..."
 	git diff --exit-code HEAD LICENSE
