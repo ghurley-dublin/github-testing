@@ -1,7 +1,8 @@
 #!/bin/bash
 # Determine if the following files changed in the branch
+echo "-----------------------------------------------------------"
 echo "Checking POM dependencies for changes..."
-
+echo "-----------------------------------------------------------"
 mkdir temp
 mvn dependency:tree -Doutput=temp/current-tree.txt
 
@@ -27,3 +28,4 @@ else
 fi
 
 git checkout master
+echo "-----------------------------------------------------------"
