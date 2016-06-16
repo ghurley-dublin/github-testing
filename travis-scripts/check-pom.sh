@@ -6,8 +6,9 @@ if [ "${TRAVIS_PULL_REQUEST}" = false ]; then
 	echo "-----------------------------------------------------------"
 	mkdir temp
 	mvn dependency:tree -Doutput=temp/current-tree.txt
-
-	git checkout HEAD^1
+	
+	echo "Checking dependencies for previous revision..."
+	git checkout HEAD~1
 	mvn dependency:tree -Doutput=temp/old-tree.txt
 
 	echo "---- Latest dependencies..."
