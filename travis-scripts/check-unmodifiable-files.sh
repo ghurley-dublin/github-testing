@@ -4,7 +4,7 @@ UNMODIFIABLE="LICENSE travis-scripts"
 echo "-----------------------------------------------------------"
 echo "Checking for modifications to files that should not be changed..."
 echo "-----------------------------------------------------------"
-if [ "${TRAVIS_PULL_REQUEST}" = true]; then
+if [ "${TRAVIS_PULL_REQUEST}" = true ]; then
 	echo "Comparing HEAD against pending commit..."
 	git diff --exit-code HEAD LICENSE
 else
