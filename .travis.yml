@@ -6,6 +6,7 @@ script:
     - mvn clean install -Dmaven.javadoc.skip=true
     - chmod 777 travis-scripts/*.sh
     - travis-scripts/check-pom.sh
+    - travis-scripts/check-unmodifiable-files.sh
 
 cache:
   directories:
